@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="jazzApp">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Jazz Preview</title>
+
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,700">
+        <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <link rel="stylesheet" href="./assets/styles.css">
+    </head>
+
+
+
+    <body layout="column" ng-controller="mainCtrl">
+        <md-content ng-clock>
+
+
+            <div ng-include="'src/view/toolbar-header.html'"></div>
+            <div ng-include="'src/view/ticketTabs.html'"></div>
+            <div ng-include="'src/view/side-nav.html'"></div>
+
+            <div ng-view></div>
+
+
+
+
+
+            <script src="./bower_components/jquery/dist/jquery.js"></script>
+            <script src="./bower_components/angular/angular.js"></script>
+            <script src="./bower_components/angular-animate/angular-animate.js"></script>
+            <script src="./bower_components/angular-aria/angular-aria.js"></script>
+            <script src="./bower_components/angular-messages/angular-messages.js"></script>
+            <script src="./bower_components/angular-material/angular-material.js"></script>
+            <script src="./bower_components/angular-material-icons/angular-material-icons.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.js"></script>
+            <script src="./bower_components/angular-route/angular-route.js"></script>
+
+            <script src="./config.js"></script>
+            <script src="./src/controller/mainController.js"></script>
+
+    </body>
+
+</html>

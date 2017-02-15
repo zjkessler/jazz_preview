@@ -1,0 +1,27 @@
+<section layout="column" flex hide-gt-sm>
+
+    <md-sidenav class="md-sidenav-left" md-component-id="left" md-whiteframe="4">
+
+        <md-content layout-margin class="md-hue-2">
+            <md-icon ng-click="toggleLeft()" class="md-accent material-icons" hide-gt-sm>
+            </md-icon>
+            <md-input-container>
+                <label for="Search">Search</label>
+                <input type="text" id="Search" ng-model="data" md-autofocus>
+            </md-input-container>
+
+            <md-nav-bar ng-repeat='nav in navItem' md-selected-nav-item="currentNavItem" layout-align="center center">
+                <!-- <md-menu> -->
+                <md-nav-item md-nav-click="goto('{{nav.title}}')" name={{nav.title}} md-ink-ripple="#2d5235">
+                    <i class=' material-icons material-icons-dark'>{{nav.icon}}</i>{{nav.title}}</md-nav-item>
+                <!-- <md-menu-content ng-repeat='item in tabsMenu' width="4">
+                        <md-menu-item>
+                            <md-button>{{item.title}}</md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu> -->
+            </md-nav-bar>
+
+        </md-content>
+
+    </md-sidenav>
