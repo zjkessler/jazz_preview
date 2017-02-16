@@ -13,7 +13,8 @@
             <md-nav-bar ng-repeat='nav in navItem' md-selected-nav-item="currentNavItem" layout-align="center center">
                 <!-- <md-menu> -->
                 <md-nav-item md-nav-click="goto('{{nav.title}}')" name={{nav.title}} md-ink-ripple="#2d5235">
-                    <i class=' material-icons material-icons-dark'>{{nav.icon}}</i>{{nav.title}}</md-nav-item>
+                    <i class=' material-icons material-icons-dark nav-icon'>{{nav.icon}}</i>
+                    <h4 class='nav-title'>{{nav.title}}</h4></md-nav-item>
                 <!-- <md-menu-content ng-repeat='item in tabsMenu' width="4">
                         <md-menu-item>
                             <md-button>{{item.title}}</md-button>

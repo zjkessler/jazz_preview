@@ -37,6 +37,18 @@ md-tab {
     margin: 0px 25px;
 }
 
+.nav-title {
+    position: relative;
+    display: inline;
+    align-items: center;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+.nav-icon {
+    padding-bottom: -10px;
+}
+
 .carousel img {
     width: auto;
     height: 350px;
