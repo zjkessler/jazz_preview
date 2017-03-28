@@ -1,45 +1,47 @@
-<md-content class="md-padding" layout-xs="column" layout="row">
-    <div flex-xs layout="column">
-        <md-button ng-click="showGridBottomSheet()" class="contact-us md-accent md-raised" md-ink-ripple="#2d5235">Contact Us</md-button>
+<md-content layout-xs="column" layout="row">
+	<div flex-xs layout="column">
+		<md-button ng-click="showGridBottomSheet()" class="contact-us md-accent md-raised" md-ink-ripple="#2d5235">Contact Us</md-button>
+	</div>
 </md-content>
-<md-card ng-repeat="item in content">
-    <md-card-title flex layout=row>
-        <md-card-title-text class="toolbar">
-            <md-toolbar layout-align="center center" layout-margin class="md-accent md-whiteframe-4dp">
-                <h1 class="md-headline">{{item.title}}</h1>
-            </md-toolbar>
-        </md-card-title-text>
-    </md-card-title>
-    <md-card-title-media>
-        <div>
-            <div uib-carousel class="carousel" active="active" interval="myInterval" no-wrap="noWrapSlides" no-pause="false">
-                <div uib-slide ng-repeat="pic in item.images track by $index" index="$index">
-                    <img ng-src="{{pic}}" style="margin:auto;">
-                </div>
-            </div>
-        </div>
 
-    </md-card-title-media>
 
-    <md-card-content>
-        <div layout="column" layout-gt-sm="row" flex>
-            <div flex="50" class="md-padding">
-                <h2 class="card-header"><b>{{item.header}}</b></h4>
-                        <p>
-                            {{item.description}}
-                        </p>
-                    </div>
-                    <div flex="50" class="md-padding">
-                        <h2 class="card-header"><b>{{item.header2}}</b></h4>
-                        <p>{{item.descrption2}}</p>
-                        <ul ng-repeat="point in item.points track by $index">
-                            <li>{{point}}</li>
-                        </ul>
-                        <h5><b>{{item.footer}}</b></p>
-                        </div>
-            </div>
-            </md-card-content>
+<md-card flex-offset-gt-sm="15" flex-xs="99" flex-gt-sm="70" ng-repeat="item in content">
+	<md-card-title flex layout="row">
+		<md-card-title-text class="toolbar">
+			<md-toolbar layout-align="center center" layout-margin class="md-accent md-whiteframe-4dp">
+				<h1 class="md-headline">{{item.title}}</h1>
+			</md-toolbar>
+		</md-card-title-text>
+	</md-card-title>
 
-        </md-card>
-    </div>
-</md-content>
+	<md-card-title-media>
+		<div flex-gt-xs="70" flex-offset-gt-xs="15">
+			<div uib-carousel class="carousel" active="active" interval="myInterval" no-wrap="noWrapSlides" no-pause="false">
+				<div uib-slide ng-repeat="pic in item.images track by $index" index="$index">
+					<img ng-src="{{pic}}" style="margin:auto;">
+				</div>
+			</div>
+		</div>
+
+	</md-card-title-media>
+
+	<md-card-content>
+		<div layout="column" layout-gt-sm="row" flex>
+			<div flex="50">
+				<h2 class="card-header"><b>{{item.header}}</b></h2>
+				<p>
+					{{item.description}}
+				</p>
+			</div>
+			<div flex="50" layout-margin>
+				<h2 class="card-header"><b>{{item.header2}}</b></h2>
+				<p>{{item.descrption2}}</p>
+				<ul ng-repeat="point in item.points track by $index">
+					<li>{{point}}</li>
+				</ul>
+				<h5><b>{{item.footer}}</b></h5>
+			</div>
+		</div>
+	</md-card-content>
+
+</md-card>

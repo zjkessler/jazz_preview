@@ -1,97 +1,111 @@
+@font-face {
+	background: url(photos/suites/Jazz-Food-066.jpg) no-repeat center center fixed;
+	background-size: cover;
+	font-family: 'NCAA Utah Utes';
+	src: url('http://www.fontsaddict.com/fontface/ncaa-utah-utes.ttf');
+}
+
 body {
-    background: url(photos/suites/Jazz-Food-066.jpg) no-repeat center center fixed;
-    background-size: cover;
+	background: url(photos/suites/Jazz-Food-066.jpg) no-repeat center center fixed;
+	background-size: cover;
 }
 
 md-content {
-    background-color: transparent !important;
+	background-color: transparent !important;
 }
 
 md-nav-item:hover {
-    background-color: white;
-    border: 1px solid #F89f1f;
+	background-color: white;
+	border: 1px solid #F89f1f;
 }
 
-md-tabs, input {
-    background-color: white !important;
+md-tabs,
+input {
+	background-color: white !important;
 }
 
 md-tab {
-    color: #2d5235;
+	color: #2d5235;
 }
 
 .background {
-    background-color: white;
-    height: 45%;
-}
-
-.material-icons {
-    color: white;
-}
-
-.material-icons-dark {
-    color: #0D223F;
-}
-
-.md-padding {
-    margin: 0px 25px;
-}
-
-.nav-title {
-    position: relative;
-    display: inline;
-    align-items: center;
-    padding-left: 5px;
-    padding-bottom: 5px;
-}
-
-.nav-icon {
-    padding-bottom: -10px;
+	background-color: white;
+	height: 45%;
 }
 
 .carousel img {
-    width: auto;
-    height: 350px;
-    horizontal-align: middle;
-    position: relative;
-    background-position: 50% 50%;
-    background-size: cover;
+	width: auto;
+	height: 350px;
+	horizontal-align: middle;
+	position: relative;
+	background-position: 50% 50%;
+	background-size: cover;
 }
 
 .card-header {
-    color: #2d5235;
+	color: #2d5235;
 }
 
 .contact-us {
-    color: white;
-    position: fixed;
-    right: 0;
-    bottom: 0;
+	color: white;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
 }
 
-.sprite {
-    background: url('./logos/JAZ1617_LogoSheet_RGB_MktgGameOps-0.png') no-repeat 0 0;
-    width: 160px;
-    height: 60px;
-    background-size: 1000% 1400%;
+.material-icons {
+	color: white;
 }
 
-.utahJazz {
-    background-position: -1048px -100px;
+.material-icons-dark {
+	color: #0D223F;
 }
 
-.utahJazz a:hover {
-    object-position: -1000px -100px;
+.md-padding {
+	margin: 0px 25px;
 }
 
 .md-headline {
-    font-size: 2em;
-    color: #0D223F;
+	font-size: 2em;
+	color: #0D223F;
+}
+
+.nav-title {
+	color: #F89f1f;
+	position: relative;
+	display: inline;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding: 5px;
+	margin: auto;
+}
+
+.nav-icon {
+	padding-bottom: 10px;
+}
+
+.sprite {
+	background: url('./logos/JAZ1617_LogoSheet_RGB_MktgGameOps-0.png') no-repeat 0 0;
+	width: 160px;
+	height: 60px;
+	background-size: 1000% 1400%;
 }
 
 .toolbar {
-    margin-right: 12px;
+	margin-right: 12px;
 }
 
+.toolbar-search {
+	color: #F89f1f;
+}
 
+.utahJazz {
+	background-position: -1048px -100px;
+}
+
+.utahJazz a:hover {
+	-o-object-position: -1000px -100px;
+	object-position: -1000px -100px;
 }
