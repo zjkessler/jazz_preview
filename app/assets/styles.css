@@ -19,13 +19,8 @@ md-nav-item:hover {
 	border: 1px solid #F89f1f;
 }
 
-md-tabs,
 input {
 	background-color: white !important;
-}
-
-md-tab {
-	color: #2d5235;
 }
 
 .background {
@@ -84,6 +79,10 @@ md-tab {
 
 .nav-icon {
 	padding-bottom: 10px;
+}
+
+.submenu {
+	background-color: white;
 }
 
 .sprite {

@@ -3,65 +3,68 @@
 
 	app.controller('mainCtrl', ("$scope", "$timeout", "$mdSidenav", "$mdBottomSheet", function ($scope, $timeout, $mdSidenav, $mdBottomSheet) {
 
-		$scope.tabsMenu = [{
+		$scope.ticketsMenu = [{
 			name: "Ticket Central",
-			link: ""
+			link: "ticketCentral"
     }, {
 			name: "Suites & Clubs",
-			link: "club-card.html"
+			link: "suites"
     }, {
 			name: "Groups",
-			link: ""
+			link: "groups"
     }, {
 			name: "Seating Map",
-			link: ""
+			link: "seatingMap"
     }, {
 			name: "Account Manager",
-			link: ""
+			link: "accountManager"
     }, {
 			name: "Flash Seats",
-			link: ""
+			link: "flashSeats"
     }];
+
+		$scope.emptyMenu = []
 
 		$scope.navItem = [{
 			title: "Tickets",
 			icon: 'event_seat',
-			submenu: $scope.tabsMenu,
-			tracker: ""
+			submenu: $scope.ticketsMenu,
+			link: "tickets"
     }, {
 			title: "Schedule",
 			icon: 'today',
-			submenu: "click on Tickets",
+			submenu: $scope.emptyMenu,
+			link: 'schedule'
     }, {
 			title: "Team",
 			icon: 'recent_actors',
-			submenu: "click on Tickets",
-			tracker: ""
+			submenu: $scope.emptyMenu,
+			link: "team"
     }, {
 			title: "Fans",
 			icon: 'thumb_up',
-			submenu: "click on Tickets",
-			tracker: ""
+			submenu: $scope.emptyMenu,
+			link: "fans"
     }, {
 			title: "Video",
 			icon: 'theaters',
-			submenu: "click on Tickets",
-			tracker: ""
+			submenu: $scope.emptyMenu,
+			link: "video"
     }, {
 			title: "Game Night",
 			icon: 'cast_connected',
-			submenu: "click on Tickets",
-			tracker: ""
+			submenu: $scope.emptyMenu,
+			link: "gameNight"
     }, {
 			title: "Community",
 			icon: 'supervisor_account',
-			submenu: "click on Tickets",
-			tracker: ""
+			submenu: $scope.emptyMenu,
+			link: "community"
     }, {
 			title: "Shop",
 			icon: 'shopping_cart',
-			submenu: "click on Tickets",
-			tracker: ""
+			submenu: $scope.emptyMenu,
+			link: "shop"
     }];
 
 
@@ -92,7 +95,7 @@
 
 		//TABS
 
-		$scope.selectedIndex = 1;
+		$scope.selectedIndex = '';
 
 		//SIDE-NAV
 
@@ -121,7 +124,7 @@
 
 		//NAV-BAR
 
-		$scope.currentNavItem = $scope.navItem[0].name;
+		$scope.currentNavItem = '';
 
 		//BOTTOM-SHEET
 

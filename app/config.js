@@ -1,15 +1,70 @@
-var app = angular.module("jazzApp", ["ngMaterial", "ngMdIcons", "ui.bootstrap", "ngRoute"]);
+var app = angular.module("jazzApp", ["ngMaterial", "ngMdIcons", "ui.bootstrap", "ui.router"]);
 
-app.config(["$routeProvider", "$locationProvider", "$mdThemingProvider", function ($routeProvider, $locationProvider, $mdThemingProvider) {
+app.config(["$stateProvider", "$urlRouterProvider", "$locationProvider", "$mdThemingProvider", function ($stateProvider, $urlRouterProvider,
+	$locationProvider, $mdThemingProvider) {
 	'use strict';
 
 
-	$locationProvider.hashPrefix("");
+	$locationProvider.hashPrefix("")
+		.html5Mode(true);
 
-	$routeProvider
-		.when("/", {
-			templateUrl: "./src/view/club-card.html"
-		});
+	$urlRouterProvider.otherwise('/');
+
+	$stateProvider
+		.state('home', {
+			url: '/',
+			templateUrl: 'src/view/home.html'
+		})
+		.state('tickets', {
+			url: '/tickets',
+			templateUrl: 'src/view/sub-menu/ticketTabs.html'
+		})
+		.state("tickets.suites", {
+			url: '/suites',
+			templateUrl: 'src/view/suites.html'
+		})
+		.state("tickets.ticketCentral", {
+			url: '/ticketCentral',
+			templateUrl: 'src/view/sub-menu/emptyMenu.html'
+		})
+		.state("tickets.groups", {
+			url: '/groups',
+			templateUrl: 'src/view/sub-menu/emptyMenu.html'
+		})
+		.state("tickets.seatingMap", {
+			url: '/seatingMap',
+			templateUrl: 'src/view/sub-menu/emptyMenu.html'
+		}).state("tickets.accountManager", {
+			url: '/accountManager',
+			templateUrl: 'src/view/sub-menu/emptyMenu.html'
+		}).state("tickets.flashSeats", {
+			url: '/flashSeats',
+			templateUrl: 'src/view/sub-menu/emptyMenu.html'
+		})
+
+		.state('schedule', {
+			url: '/schedule',
+			templateUrl: 'src/view/sub-menu/emptyMenu.html'
+		})
+		.state('team', {
+			url: '/team',
+			templateUrl: 'src/view/sub-menu/emptyMenu.html'
+		}).state('fans', {
+			url: '/fans',
+			templateUrl: 'src/view/sub-menu/emptyMenu.html'
+		}).state('video', {
+			url: '/video',
+			templateUrl: 'src/view/sub-menu/emptyMenu.html'
+		}).state('gameNight', {
+			url: '/gameNight',
+			templateUrl: 'src/view/sub-menu/emptyMenu.html'
+		}).state('community', {
+			url: '/community',
+			templateUrl: 'src/view/sub-menu/emptyMenu.html'
+		}).state('shop', {
+			url: '/shop',
+			templateUrl: 'src/view/sub-menu/emptyMenu.html'
+		})
 
 	$mdThemingProvider.definePalette('jazzPalette', {
 		'50': '0D223F',

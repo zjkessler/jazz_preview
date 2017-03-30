@@ -1,8 +1,8 @@
 <section layout="column" flex hide-gt-sm>
 
-	<md-sidenav class="md-sidenav-left" md-component-id="left" md-whiteframe="4">
+	<md-sidenav class="md-sidenav-left" md-component-id="left" md-whiteframe="4" layout="column">
 
-		<md-content layout-margin class="md-hue-2">
+		<md-content layout-margin flex class="md-hue-2">
 			<md-icon ng-click="toggleLeft()" class="md-accent material-icons" hide-gt-sm>
 			</md-icon>
 			<md-input-container>
@@ -11,18 +11,17 @@
 			</md-input-container>
 
 			<md-nav-bar ng-repeat="nav in navItem" md-selected-nav-item="currentNavItem">
-				<!-- <md-menu> -->
 				<ul layout-align="center center">
 					<li>
 						<md-menu>
 							<md-button ng-click="openMenu($mdMenu, $event)">
-								<!--								<md-nav-item md-nav-click="goto('nav.title')" name="{{nav.title}}" md-ink-ripple="#2d5235">-->
-								<i class="material-icons material-icons-dark nav-icon">{{nav.icon}}</i>
-								<h3 class="nav-title">{{nav.title}}</h3>
-								<!--								</md-nav-item>-->
+								<md-nav-item md-nav-click="goto('{{nav.title}}')" name="{{nav.title}}" md-ink-ripple="#2d5235">
+									<i class="material-icons material-icons-dark nav-icon">{{nav.icon}}</i>
+									<h3 class="nav-title">{{nav.title}}</h3>
+								</md-nav-item>
 							</md-button>
 							<md-menu-content width="5">
-								<md-menu-item ng-repeat="item in nav.submenu">
+								<md-menu-item ng-repeat="item in nav.submenu" ui-sref="tickets.{{item.link}}">
 									<md-button ng-click="toggleLeft()">{{item.name}}</md-button>
 								</md-menu-item>
 							</md-menu-content>

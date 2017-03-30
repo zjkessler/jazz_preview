@@ -1,0 +1,9 @@
+<md-nav-bar class="submenu" hide-sm hide-xs flex layout="row" layout-align="center center" md-selected-nav-item="selectedIndex" nav-bar-aria-label="navigation links">
+	<div ng-repeat="tabs in ticketsMenu">
+		<md-nav-item md-nav-sref="tickets.{{tabs.link}}" name="{{tabs.link}}">
+			{{tabs.name}}
+		</md-nav-item>
+	</div>
+</md-nav-bar>
+
+<div ui-view></div>

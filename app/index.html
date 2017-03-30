@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Jazz Preview</title>
+	<base href="/">
 
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,700">
@@ -21,11 +22,10 @@
 	<md-content ng-cloak>
 
 
-		<div ng-include="'src/view/toolbar-header.html'"></div>
-		<div ng-include="'src/view/ticketTabs.html'"></div>
+		<div ng-include="'src/view/main-nav.html'"></div>
 		<div ng-include="'src/view/side-nav.html'"></div>
 
-		<div ng-view></div>
+		<div ui-view></div>
 	</md-content>
 
 
@@ -40,8 +40,11 @@
 	<script src="./bower_components/angular-messages/angular-messages.js"></script>
 	<script src="./bower_components/angular-material/angular-material.js"></script>
 	<script src="./bower_components/angular-material-icons/angular-material-icons.js"></script>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.js"></script>
-	<script src="./bower_components/angular-route/angular-route.js"></script>
+	<script src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+
 
 	<script src="./config.js"></script>
 	<script src="./src/controller/mainController.js"></script>

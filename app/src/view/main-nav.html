@@ -1,0 +1,33 @@
+<md-toolbar layout="column" flex class="md-hue-2 md-whiteframe-6dp">
+
+	<div class="md-toolbar-tools">
+
+		<md-button ng-click="toggleLeft()" class="md-icon-button" aria-label="Settings" hide-gt-sm>
+			<md-icon class="material-icons">menu</md-icon>
+		</md-button>
+
+		<a class="utahJazz logos sprite" href="/"></a>
+
+		<md-nav-bar hide-sm hide-xs flex layout="column" layout-align="end end" md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+
+			<div ng-repeat="nav in navItem">
+				<md-nav-item md-nav-sref="{{nav.link}}" name="{{nav.link}}" md-ink-ripple="#2d5235">
+					<md-tooltip md-direction="bottom">
+						{{nav.title}}
+					</md-tooltip>
+					<i class="material-icons light">{{nav.icon}}</i>
+				</md-nav-item>
+			</div>
+			<form>
+				<input type="text" placeholder="Search...">
+			</form>
+			<!--			<md-autocomplete class="toolbar-search" flex placeholder="Search..."> SEARCH</md-autocomplete>-->
+		</md-nav-bar>
+	</div>
+</md-toolbar>
+
+<md-content layout-xs="column" layout="row">
+	<div flex-xs layout="column">
+		<md-button ng-click="showGridBottomSheet()" class="contact-us md-accent md-raised" md-ink-ripple="#2d5235">Contact Us</md-button>
+	</div>
+</md-content>
